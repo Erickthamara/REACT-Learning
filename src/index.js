@@ -3,12 +3,18 @@ import ReactDOM from "react-dom/client";
 
 const Greetings = () => {
   return (
-    <h1 id="button" className="bbtt">
-      Components in React are Functions.
-    </h1>
+    <>
+      <Name />
+      <Motto />
+    </>
   );
 };
-//export default Greetings;
+
+const Name = () => <h1>Erick</h1>;
+
+const Motto = () => {
+  return <p>My motto is doing the Bare Minimum </p>;
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<Greetings />);
