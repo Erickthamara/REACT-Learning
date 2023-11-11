@@ -1,20 +1,41 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const Greetings = () => {
+const BookList = () => {
   return (
-    <>
-      <Name />
-      <Motto />
-    </>
+    <section>
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+    </section>
   );
 };
 
-const Name = () => <h1>Erick</h1>;
-
-const Motto = () => {
-  return <p>My motto is doing the Bare Minimum </p>;
+const Book = () => {
+  return (
+    <article>
+      <BookImage />
+      <BookName />
+      <BookAuthor />
+    </article>
+  );
 };
 
+const BookImage = () => {
+  return (
+    <img
+      src="https://m.media-amazon.com/images/I/81z7-AZGsyL._AC_UL320_.jpg"
+      alt="An American beauty Novel"
+    />
+  );
+};
+const BookName = () => {
+  return <h2>An American beauty</h2>;
+};
+
+const BookAuthor = () => {
+  return <h3>Shana Abe</h3>;
+};
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Greetings />);
+root.render(<BookList />);
