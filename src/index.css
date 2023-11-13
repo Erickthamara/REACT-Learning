@@ -28,8 +28,14 @@ body {
 }
 
 .book h2 {
-  font-size: 25px;
+  font-size: 15px;
   margin-top: 1rem;
+}
+.book h3 {
+  font-size: 12px;
+  margin-top: 0.45rem;
+  letter-spacing: 1px;
+  color: rgb(13, 119, 119);
 }
 
 .book img {
