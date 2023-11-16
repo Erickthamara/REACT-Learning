@@ -22,8 +22,8 @@ const BookList = () => {
   return (
     <section className="booklist">
       {Books.map((book) => {
-        const { image, author, book: title, id } = book;
-        return <Book image={image} author={author} book={title} key={id} />;
+        //const { image, author, book: title, id } = book;
+        return <Book {...book} key={book.id} />;
       })}
     </section>
   );
