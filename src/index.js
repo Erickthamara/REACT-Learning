@@ -19,57 +19,26 @@ const Books = [
 ];
 
 const BookList = () => {
+  const childFunc = () => console.log("I am a child function");
   return (
     <section className="booklist">
-      <EventExamples />
       {Books.map((book) => {
         //const { image, author, book: title, id } = book;
-        return <Book {...book} key={book.id} />;
+        return <Book {...book} key={book.id} childFunc={childFunc} />;
       })}
     </section>
   );
 };
 
-const EventExamples = () => {
-  const handleInput = (e) => {
-    console.log(e);
-    console.log(e.target);
-    console.log(e.target.name);
-    console.log(e.target.value);
-    console.log("Input Added");
-  };
-  const handleButton = () => {
-    alert("Button Clicked");
-  };
-  const handleForm = (e) => {
-    e.preventDefault();
-    console.log("Form data Taken");
-  };
-  return (
-    <section>
-      <form onSubmit={handleForm}>
-        <h1>Typical Form</h1>
-        <input
-          type="text"
-          name="example"
-          style={{ margin: "1rem 0" }}
-          placeholder="Text"
-          onChange={handleInput}
-        />
-      </form>
-      <button onClick={handleButton}>Click Me</button>
-    </section>
-  );
-};
-
 const Book = (props) => {
-  const { author, image, book, children } = props;
+  const { author, image, book, children, childFunc } = props;
   return (
     <article className="book">
       <img src={image} alt="An American beauty Novel" />
       <h2>{book}</h2>
       <h3>{author}</h3>
-      {children}
+      {/* {children} */}
+      <button onClick={childFunc}>Click Me</button>
     </article>
   );
 };
