@@ -25,6 +25,7 @@ body {
   background: #fff;
   border-radius: 1rem;
   padding: 2rem;
+  position: relative;
 }
 
 .book h2 {
@@ -45,10 +46,20 @@ body {
 
 @media screen and (min-width: 76px) {
   .booklist {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: start;
   }
 }
 .book p {
   margin: 1rem auto;
+}
+.number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.75rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  background: rgb(205, 43, 43);
+  color: #0b0000;
 }
