@@ -8,13 +8,16 @@ const BookList = () => {
   //const indexedArray = myArray.map((value, index) => ({ index, value }));
 
   return (
-    <section className="booklist">
-      {Books.map((book, index) => {
-        //const { image, author, book: title, id } = book;
+    <>
+      <h1>Amazon Best Sellers</h1>
+      <section className="booklist">
+        {Books.map((book, index) => {
+          //const { image, author, book: title, id } = book;
 
-        return <Book {...book} key={book.id} index={index + 1} />;
-      })}
-    </section>
+          return <Book {...book} key={book.id} index={index + 1} />;
+        })}
+      </section>
+    </>
   );
 };
 
